@@ -2,17 +2,17 @@ package classroom;
 
 public class Persona {
 
-    final long cedula;
+    long cedula; // se quita el final pa que la cedula pueda ser modificada cambio 6
     String nombre;
     static int totalPersonas;
     
     static {
         totalPersonas = 0;
-        cedula = 3;
+        //cedula = 3;   cambio 7 para que la cedula no se modifique
     }
 
     public Persona(long cedula, String nombre) {
-        this.cedula = cedula;
+        this.cedula = 0;
         this.nombre = nombre;
         totalPersonas++;
     }
@@ -30,9 +30,14 @@ public class Persona {
     }
 
     public Persona(String nombre) {
-        this.nombre = "";
+        this.cedula = 1;
         totalPersonas++;
     }
+    public Persona() {
+        //this.nombre = ""; se crea otro constructor sin parametros 
+        totalPersonas++;
+    }
+
     
     public long getCedula() {
         return cedula;

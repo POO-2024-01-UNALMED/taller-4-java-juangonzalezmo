@@ -5,8 +5,8 @@ public enum Tipo {
 	
 	private int codigo;
 	private String nombre;
-	public Tipo(int codigo,String nombre) {
+	private Tipo(int codigo) { //cambiamos el contructor a un solo parametro y ademas este debe ser privado
 		this.codigo = codigo;
-		this.nombre = nombre;
+		//this.nombre = nombre;
 	}
 }

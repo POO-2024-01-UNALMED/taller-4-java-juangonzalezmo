@@ -5,7 +5,7 @@ public class Grupo {
     public Persona[] estudiantes;
     public Persona profesor;
     public Asignatura asignatura;
-    public final int codigo = 0;
+    public int codigo = 0; //quitamos el final cambio2
     public String horario;
 
     public Grupo(Persona[] estudiantes, Persona profesor, Asignatura asignatura, int codigo, String horario) {
@@ -17,8 +17,9 @@ public class Grupo {
     }
 
     public Grupo(int cantidadEstudiantes, Persona profesor, Asignatura asignatura, int codigo, String horario) {
-        Persona[] personas = new Persona[cantidadEstudiantes];
-        this(personas, profesor, asignatura, codigo, horario);
+    	this(new Persona[cantidadEstudiantes], profesor, asignatura, codigo, horario);
+    	//Persona[] personas = new Persona[cantidadEstudiantes]; el constructor se cambio de primero ya que tiene que ser asi, y se creo el objeto dentro del this
+        //cambio 3
     }
 
     public Grupo(Persona[] estudiantes, Persona profesor, Asignatura asignatura) {
